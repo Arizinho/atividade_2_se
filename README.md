@@ -1,12 +1,6 @@
-# Interface Homem-Máquina com Display OLED - RP2040 (BitDogLab)
+# Medidor de Resistores com Display OLED e Matriz de LEDs 
+## Descrição
+Este projeto foi desenvolvido utilizando a placa BitDogLab. Tem como objetivo medir o valor de resistores através de um divisor de tensão e apresentar os resultados em um display OLED e em uma matriz de LEDs 5x5.
 
-# Descrição
-
-Este projeto foi desenvolvido a placa BitDogLab. Tem como objetivo criar uma interface homem-máquina (IHM) utilizando um display OLED modelo "SSD1306" (resolução 128x64 pixels).
-
-A aplicação exibe informações em tempo real dos potenciômetros do joystick, como a leitura dos eixos X e Y. Também exibe o estado dos botões físicos e do botão do joystick. As informações são mostradas de forma organizada no display OLED via interface I2C, objetivando
-o estudo/aprendizado das funções da biblioteca do display.
-
-Observação.
-- Implementação do modo BOOTSEL por botão externo (Botão B - GPIO 6). Isto facilita a gravação no desenvolvimento do programa. Quando o projeto for finalizado, deve-se retirar
-esta função.
+A aplicação realiza a leitura da tensão no divisor de tensão utilizando o ADC da Raspberry Pi Pico. O valor da resistência medida é exibido no display OLED, junto com os códigos de cores correspondentes ao resistor detectado.  
+Além disso, uma matriz 5x5 de LEDs representa visualmente o resistor, iluminando faixas de cor conforme os dígitos calculados.
